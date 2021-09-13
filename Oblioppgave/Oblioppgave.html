@@ -17,9 +17,9 @@
         var contentDiv = document.getElementById('content');
 
         // model
+        var stroke = ""
         let numbers = [7, 3, 1, 5, 8];
-        let chosenBar = valktbar,
-            barNo; // Variabel for hvilken stolpe som er valgt
+        let chosenBar = ""; // Variabel for hvilken stolpe som er valgt
         let inputValue; // Variabel for hva som er skrevet i input-feltet
         // view
         show();
@@ -52,7 +52,7 @@
             let color = calcColor(1, 10, barNo);
             return `<rect width="${width}" height="${height}"
                             x="${x}" y="${y}" fill="${color}"
-                            onclick="${chosenBar}"></rect>`;
+                            onclick="valktbar(${barNo})"stroke="${stroke}" ></rect>`;
         }
 
         function calcColor(min, max, val) {
@@ -66,10 +66,13 @@
         // controller (ingenting her ennå)
 
 
-        function valktbar() {
-            var boarder = "3px"
+        function valktbar(barNo) {
+            stroke = "black";
+            console.log(barNo)
+            chosenBar = barNo
 
-            console.log(hei);
+
+            show();
         }
     </script>
 </body>

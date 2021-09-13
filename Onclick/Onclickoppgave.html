@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>quiz</title>
+</head>
+
+<body>
+    <p>hva heter en katt som mangler ett ben</p>
+    <h2 onclick="svar1()" id="S1">en sjøløve</h2>
+    <h2 onclick="svar2()" id="S2">en pangsjonert maler</h2>
+    <h2 onclick="svar3()" id="S3">en røver som ikke lærer</h2>
+
+    <script>
+        function svar1() {
+            document.getElementById('S1').innerHTML = 'riktig';
+        }
+
+        function svar2() {
+            document.getElementById('S2').innerHTML = 'feil';
+        }
+
+        function svar3() {
+            document.getElementById('S3').innerHTML = 'feil';
+        }
+    </script>
+
+</body>
+
+</html>
