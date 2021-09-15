@@ -50,9 +50,12 @@
             let height = number * 10;
             let y = 60 - height;
             let color = calcColor(1, 10, barNo);
+            if (chosenBar > 0) {
+                valktbar = 'stroke';
+            }
             return `<rect width="${width}" height="${height}"
                             x="${x}" y="${y}" fill="${color}"
-                            onclick="valktbar(${barNo})"stroke="${stroke}" ></rect>`;
+                            // onclick="valktbar(${barNo})"stroke="${stroke}" ></rect>`;
         }
 
         function calcColor(min, max, val) {
@@ -67,9 +70,9 @@
 
 
         function valktbar(barNo) {
-            stroke = "black";
-            console.log(barNo)
-            chosenBar = barNo
+            barNo = stroke;
+            stroke = "boarder";
+            console.log(barNo);
 
 
             show();

@@ -9,22 +9,22 @@
 </head>
 
 <body>
+    <!-- view -->
+    <!-- modell -->
     <p>hva heter en katt som mangler ett ben</p>
     <h2 onclick="svar1()" id="S1">en sjøløve</h2>
     <h2 onclick="svar2()" id="S2">en pangsjonert maler</h2>
     <h2 onclick="svar3()" id="S3">en røver som ikke lærer</h2>
-
+    <!-- controller -->
     <script>
-        function svar1() {
-            document.getElementById('S1').innerHTML = 'riktig';
-        }
+        // søk opp ===
 
-        function svar2() {
-            document.getElementById('S2').innerHTML = 'feil';
-        }
 
-        function svar3() {
-            document.getElementById('S3').innerHTML = 'feil';
+        function svar() {
+
+            document.getElementById('svar1').innerHTML = 'riktig';
+            document.getElementById('svar2').innerHTML = 'feil';
+            document.getElementById('svar3').innerHTML = 'feil';
         }
     </script>
 
