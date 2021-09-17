@@ -105,3 +105,8 @@ body {
 .dropdown li:hover>ul {
     display: block;
 }
+
+body {
+    background-image: url('bilde.jpg');
+    background-size: 100% 600%;
+}

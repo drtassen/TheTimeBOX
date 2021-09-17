@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="tallA" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <br>
+    <div id="resultat"></div>
+
+    <hr>
+
+    <input id="X" type="range" min="1" max="1000" step="1" oninput="magi()" value="2" />
+    <input id="Y" type="range" min="1" max="1000" step="1" oninput="magi()" value="2" />
+    <div id="svar"></div>
+
+    <canvas id="Canvas" width="300" height="150" style="border:2px solid #d3d3d3;">
+    </canvas>
+    <script>
+        var c = document.getElementById("Canvas");
+        var ctx = c.getContext("2d");
+        ctx.lineWidth = 10;
+        ctx.strokeRect(23, 20, 23, 100);
+        var X = document.getElementById('X');
+        var Y = document.getElementById('Y');
+    </script>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+
+        var svarDiv = document.getElementById('svar')
+
+        magi();
+        calculate();
+
+
+        function magi() {
+            var X = (Xinput.value);
+            var Y = (Yinput.value);
+            var X = stroke = "black";
+            var y = stroke = "black";
+
+            var svar = X * Y;
+            boxDiv.innerHTML = '' +
+                X + '+' + Y + '=' + svar;
+        }
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient;
+        }
+    </script>
+</body>
+
+</html>
