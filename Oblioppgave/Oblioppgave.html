@@ -17,10 +17,13 @@
         var contentDiv = document.getElementById('content');
 
         // model
-        var stroke = ""
+
         let numbers = [7, 3, 1, 5, 8];
-        let chosenBar = ""; // Variabel for hvilken stolpe som er valgt
-        let inputValue; // Variabel for hva som er skrevet i input-feltet
+        let chosenBar = 'ingen'; // Variabel for hvilken stolpe som er valgt
+        let inputValue = ''; // Variabel for hva som er skrevet i input-feltet
+        let Buttongone = '';
+        let ButtonNoVal = '';
+        let BarArrayNR = '';
         // view
         show();
 
@@ -30,32 +33,40 @@
                 svgInnerHtml += createBar(numbers[i], i + 1);
             }
             contentDiv.innerHTML = `
-            <svg id="chart" width="500" viewBox="0 0 80 60">
+            <svg id="chart" width="500" viewBox="0 -45 100 105">
                 ${svgInnerHtml}
             </svg><br/>
-            Valgt stolpe: <i>ingen</i>
+            Valgt stolpe: ${chosenBar}
             <br />
             Verdi:
             <input type="number" min="1" max="10" oninput="inputValue = this.value" />
-            <button>Legg til stolpe</button>
-            <button disabled>Endre valgt stolpe</button><br />
-            <button disabled>Fjerne valgt stolpe</button>
+            <button onclick="addBar()">Legg til stolpe</button>
+            <button ${Buttongone}${ButtonNoVal}onclick="change()">Endre valgt stolpe</button><br />
+            <button ${Buttongone}onclick="deleteBar()">Fjerne valgt stolpe</button>
             `;
         }
 
         function createBar(number, barNo) {
+            let selected;
             const width = 8;
             const spacing = 2;
             let x = (barNo - 1) * (width + spacing);
             let height = number * 10;
             let y = 60 - height;
             let color = calcColor(1, 10, barNo);
-            if (chosenBar > 0) {
-                valktbar = 'stroke';
+            if (chosenBar == barNo) {
+                selected = 'Black';
             }
-            return `<rect width="${width}" height="${height}"
-                            x="${x}" y="${y}" fill="${color}"
-                            // onclick="valktbar(${barNo})"stroke="${stroke}" ></rect>`;
+            if (chosenBar == 'ingen') {
+                Buttongone = 'disabled';
+                let deleteBar = '';
+            } else {
+                Buttongone = '';
+
+            }
+
+            return `<rect stroke="${selected}" width="${width}" height="${height}"
+                            x="${x}" y="${y}" fill="${color}"onclick="select(${barNo})"></rect>`;
         }
 
         function calcColor(min, max, val) {
@@ -66,16 +77,49 @@
             return colString;
         }
 
-        // controller (ingenting her ennå)
+        // controller
+        function select(barNo) {
 
+            if (chosenBar == barNo) {
+                chosenBar = 'ingen';
 
-        function valktbar(barNo) {
-            barNo = stroke;
-            stroke = "boarder";
-            console.log(barNo);
+            } else {
+                chosenBar = barNo;
+                console.log(chosenBar);
+                BarArrayNR = barNo; - 1;
+                console.log(BarArrayNR);
+            }
+            show()
+        }
 
+        function change() {
+            if (inputValue < 1) {
+                alert('Error, value must be higher than "1"');
+            } else if (inputValue > 10) {
+                alert('error, value too hige correct value si 1-10')
+            } else {
+                numbers.splice(BarArraynr, 1, inputValue);
+            }
+            show()
+        }
 
-            show();
+        function addBar() {
+
+            if (inputValue > 10) {
+                alert('Error, value too high correct value is 1-10')
+            } else if (inputValue > -0.1) {
+                numbers.push(inputValue);
+            } else {
+                alert('Error, Value must be higher than "1"');
+            }
+            show()
+        }
+
+        function deleteBar() {
+            numbers.splice(chosenBar = hidden);
+            console.log(chosenBar);
+
+            show()
         }
     </script>
 </body>
