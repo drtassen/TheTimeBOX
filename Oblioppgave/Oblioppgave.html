@@ -24,6 +24,7 @@
         let Buttongone = '';
         let ButtonNoVal = '';
         let BarArrayNR = '';
+
         // view
         show();
 
@@ -94,13 +95,14 @@
         }
 
         function change() {
-            if (inputValue < 1) {
+            if (inputValue < 0.1) {
                 alert('Error, value must be higher than "1"');
             } else if (inputValue > 10) {
                 alert('error, value too hige correct value si 1-10')
             } else {
                 numbers.splice(BarArrayNR, 1, inputValue);
             }
+            console.log(inputValue)
             show()
         }
 
@@ -108,7 +110,8 @@
 
             if (inputValue > 10) {
                 alert('Error, value too high correct value is 1-10')
-            } else if (inputValue > -0.1) {
+            }
+            if (inputValue >= 0.1) {
                 numbers.push(inputValue);
             } else {
                 alert('Error, Value must be higher than "1"');
@@ -118,10 +121,11 @@
 
         function deleteBar() {
             numbers.splice(BarArrayNR, 1)
-
+            console.log(BarArrayNR)
             show()
         }
     </script>
 </body>
+https://getacademy.moodlecloud.com/mod/page/view.php?id=459
 
 </html>
