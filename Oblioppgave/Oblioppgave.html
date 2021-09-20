@@ -88,7 +88,7 @@
                 console.log(chosenBar);
                 BarArrayNR = barNo; - 1;
                 console.log(BarArrayNR);
-                console.log(input.Value);
+
             }
             show()
         }
@@ -99,7 +99,7 @@
             } else if (inputValue > 10) {
                 alert('error, value too hige correct value si 1-10')
             } else {
-                numbers.splice(BarArraynr, 1, inputValue);
+                numbers.splice(BarArrayNR, 1, inputValue);
             }
             show()
         }
@@ -117,7 +117,7 @@
         }
 
         function deleteBar() {
-            // numbers.splice(chosenBar = (); console.log(chosenBar);
+            numbers.splice(BarArrayNR, 1)
 
             show()
         }
