@@ -20,7 +20,8 @@
         var points = 0;
         var pointsPerClick = 1;
         var smileyIndex = 0;
-
+        var do10Click = 10;
+        var jukseteller = 0;
         // controller
         function doClick() {
             points += pointsPerClick;
@@ -30,9 +31,24 @@
 
         function buyUpgrade() {
             if (points < 10) return;
+
             points -= 10;
             pointsPerClick++;
             updateView();
+        }
+
+        function do10ClickF() {
+            // points *= pointsPerClick;
+            // do10Click = 1 - smileyIndex;
+            // smileyIndex = 1 - smileyIndex;
+            points *= 10;
+            pointsPerClick *= 10
+            alert("jokser")
+            jukseteller++;
+            updateView();
+
+
+
         }
 
         // view
@@ -43,7 +59,9 @@
             document.getElementById('app').innerHTML = `
                 <div id="image" onclick="doClick()">${smiley}</div>
                 <div id="pointsInfo">${points}</div>
+                <div id="jukseteller">${jukseteller}</div>
                 <button onclick="buyUpgrade()">Kjøp oppgradering (10 poeng)</button>
+                <button onclick="do10ClickF()">10 poeng uten jobb</button>
             `;
         }
     </script>
