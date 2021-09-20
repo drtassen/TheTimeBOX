@@ -42,10 +42,12 @@
             Verdi:
             <input type="number" min="1" max="10" oninput="inputValue = this.value" />
             <button onclick="addBar()">Legg til stolpe</button>
-            <button ${Buttongone}${ButtonNoVal}onclick="change()">Endre valgt stolpe</button><br />
-            <button ${Buttongone}onclick="deleteBar()">Fjerne valgt stolpe</button>
+            <button ${Buttongone}${ButtonNoVal} ${chosenBar == "ingen" ? "disabled" : ""} onclick="change()">Endre valgt stolpe</button><br />
+            <button ${Buttongone} ${chosenBar == "ingen" ? "disabled" : ""}  onclick="deleteBar()">Fjerne valgt stolpe</button>
             `;
         }
+
+        // if(chosenBar == ingen){ "disabled"} else { "" }
 
         function createBar(number, barNo) {
             let selected;
@@ -87,7 +89,7 @@
             } else {
                 chosenBar = barNo;
                 console.log(chosenBar);
-                BarArrayNR = barNo; - 1;
+                BarArrayNR = barNo - 1;
                 console.log(BarArrayNR);
 
             }
@@ -101,8 +103,8 @@
                 alert('error, value too hige correct value si 1-10')
             } else {
                 numbers.splice(BarArrayNR, 1, inputValue);
+                console.log(inputValue)
             }
-            console.log(inputValue)
             show()
         }
 
@@ -120,8 +122,11 @@
         }
 
         function deleteBar() {
+            // chosenBar === 0
             numbers.splice(BarArrayNR, 1)
-            console.log(BarArrayNR)
+                // numbers.splice.chosenBar = delete
+                // disabel.chosenBar
+                // console.log(chosenBar)
             show()
         }
     </script>
