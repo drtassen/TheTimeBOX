@@ -47,7 +47,7 @@
             `;
         }
 
-        // if(chosenBar == ingen){ "disabled"} else { "" }
+
 
         function createBar(number, barNo) {
             let selected;
@@ -85,7 +85,6 @@
 
             if (chosenBar == barNo) {
                 chosenBar = 'ingen';
-
             } else {
                 chosenBar = barNo;
                 console.log(chosenBar);
@@ -122,11 +121,7 @@
         }
 
         function deleteBar() {
-            // chosenBar === 0
             numbers.splice(BarArrayNR, 1)
-                // numbers.splice.chosenBar = delete
-                // disabel.chosenBar
-                // console.log(chosenBar)
             show()
         }
     </script>
