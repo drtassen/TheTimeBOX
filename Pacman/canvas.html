@@ -51,7 +51,7 @@
                 for (i = 0; i < 30; i++) {
                     ctx.fillRect(35 + i * 16, 147, 4, 4);
                 }
-                //R4
+                //ned prikker
                 for (i = 0; i < 29; i++) {
                     ctx.fillRect(115, 51 + i * 16, 4, 4);
                 }
@@ -111,6 +111,12 @@
             ctx.arcTo(x, y, x, y + radius, radius);
             ctx.stroke();
         }
+        //gif senter
+        var canvas = document.getElementById("mycanvas");
+        var img = canvas.toDataURL("Pacman\pac.gif");
+        // Pacman.load("pac.gif");
+        // var Pacman = GiF();
+        // Pacman.src = "Pacman\pac.gif";
     </script>
 </head>
 
