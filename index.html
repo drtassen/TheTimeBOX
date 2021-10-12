@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="Thetimebox.css">
+    <link rel="stylesheet" href="thetimebox.js">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(─‿‿─)</title>
@@ -15,10 +16,16 @@
         <h1>TheTimeBox</h1>
     </div>
 
+
+
     <div class="topnav">
         <!-- <a href="dynamiskREF\dynamisk referanse.html" target="_blank">dynamiskREF</a> -->
 
-        todolist
+
+        <!-- TO DO LIST -->
+        <!-- mus trakker -->
+        <!-- stoppe klokke / timer-->
+
 
         <a href="Oblioppgave\Oblioppgave.html">Oblioppgave</a>
         <a href="dynamiskREF\dynamisk referanse.html">dynamiskREF</a>
@@ -32,13 +39,16 @@
         <a href="TicakTcakToe\Tic-tac-bigtoe.html">TTTgame</a>
         <a href="alfabetet\index.html">Morsecode</a>
     </div>
+</body>
 
-    <script>
-        function box() {
-            var myWindow = window.open("https://soundcloud.com/drtassen", "MsgWindow", "width=800,height=900");
-            myWindow.document.write("<p>This window's name is: " + mysond + "</p>");
-        }
-    </script>
-
+<script>
+    function box() {
+        var myWindow = window.open("https://soundcloud.com/drtassen", "MsgWindow", "width=800,height=900");
+        myWindow.document.write("<p>This window's name is: " + mysond + "</p>");
+    }
+</script>
+<footer>
+    <div>Registration closes in <span id="time">05:00</span> minutes!</div>
+</footer>
 
 </html>
