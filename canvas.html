@@ -21,18 +21,35 @@
             var canvas = document.getElementById('canvas');
             if (canvas.getContext) {
                 var ctx = canvas.getContext('2d');
-                //tomme boxer
-                roundedRect(ctx, 12, 12, 515, 515, 15);
-                roundedRect(ctx, 19, 19, 500, 500, 9);
-                roundedRect(ctx, 53, 53, 49, 33, 10);
-                roundedRect(ctx, 53, 119, 49, 16, 6);
-                roundedRect(ctx, 135, 53, 49, 33, 10);
-                roundedRect(ctx, 210, 53, 49, 33, 10);
-                roundedRect(ctx, 283, 53, 49, 33, 10);
-                roundedRect(ctx, 355, 53, 49, 33, 10);
-                roundedRect(ctx, 425, 53, 49, 33, 10);
-                roundedRect(ctx, 135, 119, 25, 49, 10);
-                roundedRect(ctx, 195, 119, 49, 49, 10);
+                //ytter ramme
+                roundedRect(ctx, 1, 1, 1000, 1000, 15);
+                roundedRect(ctx, 10, 10, 980, 980, 15);
+                //tomme boxer    X,  Y,  RX, UY, curve,
+                roundedRect(ctx, 50, 50, 50, 50, 10);
+                roundedRect(ctx, 125, 50, 50, 50, 10);
+                roundedRect(ctx, 200, 50, 50, 50, 10);
+                roundedRect(ctx, 275, 50, 50, 50, 10);
+                roundedRect(ctx, 350, 50, 50, 50, 10);
+                roundedRect(ctx, 425, 50, 50, 50, 10);
+                roundedRect(ctx, 500, 50, 50, 50, 10);
+                roundedRect(ctx, 575, 50, 50, 50, 10);
+                roundedRect(ctx, 650, 50, 50, 50, 10);
+                roundedRect(ctx, 725, 50, 50, 50, 10);
+                roundedRect(ctx, 800, 50, 50, 50, 10);
+                roundedRect(ctx, 875, 50, 50, 50, 10);
+                // R2
+                roundedRect(ctx, 50, 125, 50, 50, 10);
+                roundedRect(ctx, 125, 125, 50, 50, 10);
+                roundedRect(ctx, 200, 125, 50, 50, 10);
+                roundedRect(ctx, 275, 125, 50, 50, 10);
+                roundedRect(ctx, 350, 125, 50, 50, 10);
+                roundedRect(ctx, 425, 125, 50, 50, 10);
+                roundedRect(ctx, 500, 125, 50, 50, 10);
+                roundedRect(ctx, 575, 125, 50, 50, 10);
+                roundedRect(ctx, 650, 125, 50, 50, 10);
+                roundedRect(ctx, 725, 125, 50, 50, 10);
+                roundedRect(ctx, 800, 125, 50, 50, 10);
+                roundedRect(ctx, 875, 125, 50, 50, 10);
 
                 ctx.beginPath();
                 ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
@@ -49,14 +66,14 @@
                 }
                 //R3
                 for (i = 0; i < 30; i++) {
-                    ctx.fillRect(35 + i * 16, 147, 4, 4);
+                    ctx.fillRect(35 + i * 16, 157, 4, 4);
                 }
                 //R4
                 for (i = 0; i < 29; i++) {
                     ctx.fillRect(115, 51 + i * 16, 4, 4);
                 }
 
-
+                //spøkelse
                 ctx.beginPath();
                 ctx.moveTo(83, 116);
                 ctx.lineTo(83, 102);
@@ -74,10 +91,9 @@
                 ctx.fillStyle = 'white';
                 ctx.beginPath();
                 ctx.moveTo(91, 96);
-                ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
+                ctx.bezierCurveTo(88, 96, 87, 100, 87, 101);
                 ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
                 ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
-                ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
                 ctx.moveTo(103, 96);
                 ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
                 ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
@@ -88,6 +104,7 @@
                 ctx.fillStyle = 'black';
                 ctx.beginPath();
                 ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
+                ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
                 ctx.fill();
 
                 ctx.beginPath();
