@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ಠ_ಠ</title>
 </head>
-
+/////////////////////// to do: lagre tallet på gjetting<br>
+////////////////////// (enter) må bli tipp knappen<br>
+/////////////////////trenger en var til å referere til ?<br>
+//////////////////// function upptate view må legges inn ny var til teller av tipping
 <body>
     <div id="app"></div>
 
     <script>
         // model
+        
         let guessNumber;
         let secretNumber;
 
@@ -20,10 +24,10 @@
             const guessText = guessNumber == null ? '' : `Du tippet ${guessNumber}.<br/>`;
 
             let isCorrectOrNotText =
-                guessNumber == null ? 'Skriv inn tallet du vil tippe i feltet under og trykk på knappen "Tipp"<br/>' :
+                guessNumber == null ? 'Skriv inn ett tall 0 til 1000 <br/>' :
                 guessNumber == secretNumber ? '<b>Du har tippet riktig!</b>' :
-                guessNumber < secretNumber ? 'Du har tippet for lavt.' :
-                guessNumber > secretNumber ? 'Du har tippet for høyt.' :
+                guessNumber < secretNumber ? 'Du har tippet for lavt (°ロ°)☝.' :
+                guessNumber > secretNumber ? 'Du har tippet for høyt (°ロ°) 👇.' :
                 '(Feil - dette skal ikke forekomm)';
 
             // let isCorrectOrNotText;
@@ -52,11 +56,14 @@
 
         function startGame() {
             guessNumber = null;
-            secretNumber = Math.ceil(Math.random() * 100);
+            secretNumber = Math.ceil(Math.random() * 1000);
             updateView();
         }
 
         function guess() {
+            updateView();
+        }
+        function guesses(){
             updateView();
         }
     </script>
