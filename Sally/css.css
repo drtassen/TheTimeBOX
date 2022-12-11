@@ -3,14 +3,18 @@
 }
 
 body {
-    background-color: rgb(43, 43, 43);
-    margin: 0;
+    background-image: url('Ludd3_PD 3.jpg');
+    background-size: 100% 200%;
+}
+
+
+
+body {
+    background-color: rgb(104, 142, 105);
+    margin: 10%;
     text-align: center;
-    background-image: url(PinClipart.com_pumpkins-in-a-row_3909232.png);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: 300px;
-    font-family: 'Kaushan Script', cursive;
+   
+    
 }
 
 body::-webkit-scrollbar {
