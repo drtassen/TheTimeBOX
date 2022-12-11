@@ -6,6 +6,14 @@ body {
     margin: 0;
 }
 
+.trakcer{
+    position: absolute;
+    width: 35px;
+    height: 35;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
 
 /* Style the header */
 
@@ -20,7 +28,7 @@ body {
 
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(80, 8, 175, 0.238);
 }
 
 
@@ -31,7 +39,7 @@ body {
     display: block;
     color: hsl(118, 69%, 51%);
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 110px;
     text-decoration: none;
 }
 

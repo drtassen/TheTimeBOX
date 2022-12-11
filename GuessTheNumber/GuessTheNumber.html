@@ -15,7 +15,7 @@
 
     <script>
         // model
-        
+        let tryesNumber;
         let guessNumber;
         let secretNumber;
 
@@ -28,7 +28,9 @@
                 guessNumber == secretNumber ? '<b>Du har tippet riktig!</b>' :
                 guessNumber < secretNumber ? 'Du har tippet for lavt (°ロ°)☝.' :
                 guessNumber > secretNumber ? 'Du har tippet for høyt (°ロ°) 👇.' :
+                
                 '(Feil - dette skal ikke forekomm)';
+
 
             // let isCorrectOrNotText;
             // if (guessNumber == null) {
