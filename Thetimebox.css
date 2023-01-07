@@ -23,7 +23,6 @@ body {
     text-align: center;
 }
 
-
 /* Style the top navigation bar */
 
 .topnav {
@@ -120,5 +119,9 @@ body {
 
 body {
     background-image: url('bilde.jpg');
+    background-size: 100% 300%;
+}
+footer {
+    background-image: url('Goal.mp4');
     background-size: 100% 300%;
 }
