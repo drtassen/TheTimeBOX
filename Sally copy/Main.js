@@ -6,10 +6,17 @@ window.addEventListener('load', function(){
     canvas.width = 1000;
     canvas.height = 1000;
 
+    let x = 0 ;
+    let y = 0 ;
+
+    function update(){
+        ctx.fillRect(x,y,50,50)
+        requestAnimationFrame(update)
+    }
 
     class Game {
         constructor(width, height){
-            this.width = width;
+        this.width = width;
             this.height = height;
             this.player = new player(this);
         }
@@ -17,26 +24,19 @@ window.addEventListener('load', function(){
 
         }
         
+
+        // hvordan endre verdien ?
 draw(context){
     ctx.lineWidth = 5;
 
     ctx.beginPath();
-    ctx.moveTo(200, 0);
-    ctx.lineTo(130, 130);
+    ctx.moveTo(1000, 1000);
+    ctx.lineTo(0, 0);
 
-    ctx.rect(400, 400, 70, 200);
-    ctx.stroke();
+    ctx.rect(400, 400, 200, 200);
+    ctx.stroke();  
 }
-    
-
-
-
-
-        //draw(context){
-        //    this.player.draw(context);
-        //    
-        //}
-    }//
+    }
 
     const game = new Game(canvas.width, canvas.height);
     console.log(game);
@@ -47,4 +47,3 @@ draw(context){
     }
     animate();
 });
-
