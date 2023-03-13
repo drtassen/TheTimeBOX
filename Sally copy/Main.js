@@ -1,6 +1,7 @@
-import { player } from './player.js';
+import { player } from '/player.js';
 
-window.addEventListener('load', function(){
+import { export1 } from "Player.js";
+window.addEventListener('load', function(){ 
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     canvas.width = 1000;
@@ -34,10 +35,11 @@ draw(context){
     ctx.lineTo(0, 0);
 
     ctx.rect(400, 400, 200, 200);
-    ctx.stroke();  
+    //ctx.stroke(); 
+    
+ 
 }
     }
-
     const game = new Game(canvas.width, canvas.height);
     console.log(game);
 

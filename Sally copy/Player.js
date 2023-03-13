@@ -5,6 +5,8 @@ export class player {
     //    this.height = 91.3;
     //    this.x = 10;
     //    this.y = 200;
+
+
     }
     update (){
 
