@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>¯\_(ツ)_/¯</title>
-    <link rel="stylesheet" href="view.css">
-    
+    <title>JavaScript Canvas Tegning</title>
 </head>
+
 <body>
-    
-<canvas width="300" height="300" id="canvas1">¨
+    <canvas id="tegning" width="500" height="500"></canvas>
 
-    <p>heiverden</p>
-</canvas>
+    <script>
+        var canvas = document.getElementById("tegning");
+        var ctx = canvas.getContext("2d");
 
+        canvas.addEventListener("mousedown", startTegning);
+        canvas.addEventListener("mousemove", tegn);
+        canvas.addEventListener("mouseup", stopTegning);
+
+        var tegner = false;
+
+        function startTegning(e) {
+            tegner = true;
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        }
+
+        function tegn(e) {
+            if (tegner) {
+                ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+                ctx.stroke();
+            }
+        }
+
+        function stopTegning() {
+            tegner = false;
+        }
+    </script>
 </body>
+
 </html>
