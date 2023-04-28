@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac bigtoe</title>
+    <style>
+        body {
+            background-image: url(https://www.getacademy.no/img/terje.a138726e.jpeg);
+            text-align: center;
+        }
+        
+        button {
+            margin: 30px;
+        }
+        
+        button.reset {
+            height: auto;
+            width: auto;
+            font-size: 50px;
+        }
+        
+        /* button.DummyRemoveLater {
+            display: block;
+            font-size: 30px; 
+        } */
+        /* button.changePlayer {
+            height: auto;
+            width: auto;
+            text-align: center;
+            margin-left: 250px;
+            
+         } */
+        
+        div.sub {
+            background-color: hotpink;
+            width: 33.33%;
+            height: 33.33%;
+            outline: black 2px solid;
+            float: left;
+        }
+        
+        /* .clear {
+            clear: left;
+        } */
+        /* .float {
+            float: left;
+        } */
+        
+        #brett {
+            width: 700px;
+            height: 700px;
+            margin: 0 auto;
+        }
+        
+        img {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="reset" onclick="Restart()">Reset</button>
+
+
+    <div id='brett'>
+
+        <div id="r1k1" onclick="trykk(this)" class="sub"></div>
+        <div id="r1k2" onclick="trykk(this)" class="sub"></div>
+        <div id="r1k3" onclick="trykk(this)" class="sub"></div>
+        <div id="r2k1" onclick="trykk(this)" class="sub"></div>
+        <div id="r2k2" onclick="trykk(this)" class="sub"></div>
+        <div id="r2k3" onclick="trykk(this)" class="sub"></div>
+        <div id="r3k1" onclick="trykk(this)" class="sub"></div>
+        <div id="r3k2" onclick="trykk(this)" class="sub"></div>
+        <div id="r3k3" onclick="trykk(this)" class="sub"></div>
+
+    </div>
+    <script>
+        function Restart() {
+            document.location = 'https://drtassen.github.io/team2//Tic-tac-bigtoe.html';
+        }
+
+        // function DummyFunction() {
+        //     let player = 1;
+        //     document.getElementById("dummyID").style.display = "none";
+        // }
+
+        let currentPlayer = 1;
+
+        function trykk(rute) {
+            if (currentPlayer == 1 && rute.innerHTML == '') {
+                rute.innerHTML = "<img src = 'X.gif' > ";
+                currentPlayer = 2;
+            } else if (currentPlayer == 2 && rute.innerHTML == '') {
+                rute.innerHTML = "<img src = 'O.gif' > ";
+                currentPlayer = 1;
+            }
+        }
+        /*else if (player == 2) {
+                           endre.innerHTML = "<img src = 'O.gif' > ";
+                           let player = 1;
+                       }
+                   }
+ */
+        // }
+        /* function trykk(endre, playerX) {
+            endre.innerHTML = "<img src = '/O.gif' > ";
+            document.getElementById('player').classList.toggle('playerO'); */
+
+
+
+        /* 
+                function trykk(selected) {
+                }
+                function trykk() { */
+
+        // }
+    </script>
+</body>
+
+</html>
