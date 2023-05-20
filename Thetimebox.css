@@ -125,3 +125,18 @@ footer {
     background-image: url('Goal.mp4');
     background-size: 100% 300%;
 }
+-------------------------------------------
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#banana {
+    position: absolute;
+    width: 50px;
+    /* Juster størrelsen etter behov */
+    height: auto;
+    pointer-events: none;
+    /* Sørger for at bananen ikke forstyrrer musebevegelsene */
+}
