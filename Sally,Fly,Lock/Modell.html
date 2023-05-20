@@ -6,11 +6,14 @@
 </head>
 
 <body>
-    <canvas id="tegning" width="500" height="500"></canvas>
+    <canvas id="tegning" width="900" height="800"></canvas>
 
     <script>
         var canvas = document.getElementById("tegning");
         var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#666";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         canvas.addEventListener("mousedown", startTegning);
         canvas.addEventListener("mousemove", tegn);
