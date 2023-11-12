@@ -2,7 +2,29 @@
 <html>
 
 <head>
-    <title>JavaScript Canvas Tegning</title>
+    <link rel="stylesheet" href="Sally,Fly,Lock\view.css">
+    <title>(▀̿Ĺ̯▀̿ ̿)</title>
+    <style>
+        body {
+            background-color: gray;
+
+            background-image: url('din-bakgrunnsbilde.jpg');
+			background-size: cover;
+		}
+
+        
+		canvas {
+			border: 2px solid black;
+			border-radius: 10px;
+			margin: 20px auto;
+			display: block;
+		}
+    
+
+
+
+
+    </style>
 </head>
 
 <body>
@@ -11,10 +33,14 @@
     <script>
         var canvas = document.getElementById("tegning");
         var ctx = canvas.getContext("2d");
+<<<<<<< Updated upstream
 
     ctx.fillStyle = "#666";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+=======
+    
+>>>>>>> Stashed changes
         canvas.addEventListener("mousedown", startTegning);
         canvas.addEventListener("mousemove", tegn);
         canvas.addEventListener("mouseup", stopTegning);
